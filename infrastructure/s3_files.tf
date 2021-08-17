@@ -6,4 +6,3 @@ resource "aws_s3_bucket_object" "raw-data" {
 #   etag   = filemd5("matricula_co.csv")
 }
 
-# nova pasta
