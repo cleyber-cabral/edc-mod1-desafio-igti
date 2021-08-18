@@ -11,8 +11,8 @@ resource "aws_lambda_function" "executa_emr" {
   runtime = "python3.8"
 
   tags = {
-    IES = "IGTI"
+    IES   = "IGTI"
     CURSO = "EDC"
   }
-  
+
 }
