@@ -3,7 +3,7 @@ resource "aws_glue_catalog_database" "matricula" {
 }
 
 resource "aws_glue_crawler" "matricula" {
-  database_name = aws_glue_catalog_database.matricula
+  database_name = aws_glue_catalog_database.matricula.name
   name          = "matricula_s3_crawler"
   role          = aws_iam_role.glue_role.arn
 
