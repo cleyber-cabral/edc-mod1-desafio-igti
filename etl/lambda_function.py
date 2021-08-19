@@ -83,18 +83,6 @@ def handler(event, context):
                 StepConcurrencyLevel=1,
                 
                 Steps=[{
-                    'Name': 'Upload dos dados',
-                    'ActionOnFailure': 'CONTINUE',
-                    'HadoopJarStep': {
-                        'Jar': 'command-runner.jar',
-                        'Args': ['spark-submit',
-                                 '--master', 'yarn',
-                                 '--deploy-mode', 'cluster',
-                                 's3://datalake-igti-cleyber-tf/emr-code/pyspark/interact_s3.py'
-                                 ]
-                    }
-                },
-                {
                     'Name': 'ETL',
                     'ActionOnFailure': 'CONTINUE',
                     'HadoopJarStep': {
