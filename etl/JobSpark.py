@@ -25,5 +25,5 @@ censo = (
     .mode("overwrite")
     .format("parquet")
     .partitionBy("year")
-    .save("s3://datalake-igti-cleyber-tf/raw-data/censo/")
+    .save("s3://datalake-igti-cleyber-tf/staging-zone/censo/")
 )
