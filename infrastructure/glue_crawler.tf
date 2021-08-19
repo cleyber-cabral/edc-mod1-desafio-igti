@@ -8,7 +8,7 @@ resource "aws_glue_crawler" "matricula" {
   role          = aws_iam_role.glue_role.arn
 
   s3_target {
-    path = "s3://${aws_s3_bucket.dl.id}/matricula"
+    path = "s3://${aws_s3_bucket.dl.id}/staging-zone/censo/"
   }
 
   configuration = <<EOF
