@@ -10,12 +10,4 @@ resource "aws_glue_crawler" "matricula" {
   s3_target {
     path = "s3://${aws_s3_bucket.dl.id}/staging-zone/censo/"
   }
-
-  configuration = <<EOF
-{
-   "Version": 1.0,
-   "Grouping": {
-      "TableGroupingPolicy": "CombineCompatibleSchemas" }
-}
-EOF
 }
