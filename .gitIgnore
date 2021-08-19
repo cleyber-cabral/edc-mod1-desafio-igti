@@ -2,3 +2,5 @@
 *.zip
 *.vscode
 *.pdf
+*.hcl
+.terraform/
